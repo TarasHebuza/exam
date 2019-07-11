@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.people {
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.person {
+    width: 200px;
+    border: 12px solid #fff;
+    background-color: #fff;
+    border-radius: 20px;
+    transition: background-color 1s;
+}
+
+.person:hover {
+    z-index: 10;
+    background-color: #EEEEEE;
+}
+
+.person__photo {
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+
+.person__img {
+    width: 100%;
+    border-radius: 50%;
+    transition: border-radius 1s
+}
+
+.person:hover .person__img {
+    border-radius: 30px;
+}
+
+.number {
+    width: 33px;
+    height: 33px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: #8B0000;
+    position: absolute;
+    top: 84px;
+    right: 10px;
+}
+
+.person__name {
+    font-family: Arial;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: #2F4F4F;
+    margin-top: 3px;
+}
+
+.person__extra {
+    font-family: Arial;
+    font-size: 21.6px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.person:hover .person__extra {
+   opacity: 1;
+}
+
+@media (max-width: 750px) {
+    .people {
+        width: 430px;
+        justify-content: space-between;
+    }
+
+    .person {
+        border: none;
+    }
+
+}
